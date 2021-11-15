@@ -12,3 +12,6 @@ td {
 .task {
   margin: 40px;
 }
+img {
+  display: block;
+}
