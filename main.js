@@ -209,4 +209,34 @@ console.log(Object.entries(formData));
 // })
 // console.log(obj);
 
+//! Task 8
+const boxRefs = document.querySelectorAll('.task8')
+console.log("🚀 ~ boxRef", boxRefs)
+boxRefs.forEach(eventListener)
+function eventListener(item) {
+    item.addEventListener('click', toggleColor)
+}
+function toggleColor(event) {
+    console.log('click');
+    event.currentTarget.classList.toggle('green')
+}
+
+//! Task 9
+const linksRef = document.querySelector('.task9')
+console.log("🚀 ~ linksRef", linksRef)
+linksRef.addEventListener('click', onClickHandler)
+
+function onClickHandler(event) {
+    event.preventDefault()
+    const link = event.target
+    console.log("🚀 ~ link", link)
+    if (link.tagName !== 'A') {
+        return;
+    }
+    const attrValue = link.getAttribute('href')
+    if (attrValue.includes('http') || attrValue.includes('ftp')) {
+        link.style.color = 'red';
+    }
+    console.log(attrValue)
+}
 

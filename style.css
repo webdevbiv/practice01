@@ -15,3 +15,31 @@ td {
 img {
   display: block;
 }
+
+.football-field {
+  width: 400px;
+  position: relative;
+  height: 200px;
+  border: 1px solid
+    #212121;
+  background: green;
+}
+
+.ball {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: red;
+}
+.task8 {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  margin: 10px;
+}
+.green {
+  background-color: green;
+}
