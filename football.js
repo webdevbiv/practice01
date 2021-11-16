@@ -15,15 +15,18 @@ console.log(fieldRef, ballRef);
 fieldRef.addEventListener('click', moveBall)
 console.dir(ballRef)
 const style = getComputedStyle(ballRef)
-const ballWidth = ballRef.clientWidth
+const ballWidth = ballRef.clientWidth / 2
 console.log("🚀 ~ ballWidth", ballWidth, typeof ballWidth)
 
 
 
 function moveBall(event) {
     console.log(`cordinates: ${event.offsetX}, ${event.offsetY}`);
-    const x = event.offsetX - ballWidth / 2
-    const y = event.offsetY - ballWidth / 2
+    if (event.offsetX == 20 && event.offsetY == 20) {
+        return
+    }
+    const x = event.offsetX - ballWidth
+    const y = event.offsetY - ballWidth
     console.log(x, y);
     ballRef.style.cssText = `position:absolute; left:${x}px; top:${y}px`
 }
